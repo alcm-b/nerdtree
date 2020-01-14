@@ -306,7 +306,9 @@ function! s:Opener._reuseWindow()
         return 0
     endif
 
-    "check other tabs
+    "never check other tabs
+    return 0
+
     let tabnr = self._path.tabnr()
     if tabnr
         call self._checkToCloseTree(1)
